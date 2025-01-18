@@ -1,4 +1,5 @@
-version: 0.0
+---
+version: 0
 os: linux
 files:
   - source: /index.html/
@@ -6,11 +7,7 @@ files:
   - source: /Dockerfile
     destination: /home/ubuntu/app/
 hooks:
-
-
-    AfterInstall:
+  AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
- 
- 
